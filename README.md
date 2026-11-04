@@ -42,10 +42,35 @@ The script writes result images to `Result/`.
 
 ## Data
 
-The script expects the SWIR scan and reference CSV files outside this folder:
+The dataset is not included. Use your own SWIR scan and known-plastic
+reference CSV files, and place them in this local structure:
 
-- `Group4/Scanner/ir plastics_scan_0552/capture/`
-- `Transmittance/`
+```text
+data/
+├── ir plastics_scan_0552/
+│   ├── ir plastics_scan_0552.png
+│   └── capture/
+│       ├── ir plastics_scan_0552.hdr
+│       ├── ir plastics_scan_0552.raw
+│       ├── WHITEREF_ir plastics_scan_0552.hdr
+│       ├── WHITEREF_ir plastics_scan_0552.raw
+│       ├── DARKREF_ir plastics_scan_0552.hdr
+│       └── DARKREF_ir plastics_scan_0552.raw
+└── Transmittance/
+    ├── HD-PE-transmittance.Sample.Raw.csv
+    ├── PC-transmittance.Sample.Raw.csv
+    ├── POM-transmittance.Sample.Raw.csv
+    ├── PP(H)-transmittance.Sample.Raw.csv
+    └── PS-transmittance.Sample.Raw.csv
+```
 
-Update the paths in the script if the data are stored elsewhere. Raw scanner
-data are not included in this repository.
+The script reads from `data/`, which is intentionally excluded from GitHub.
+After placing a compatible dataset there, run the script without changing
+your personal directory paths:
+
+```bash
+python Plastic_classificationl.py
+```
+
+If your files use different names or ROI locations, update `scan_name`,
+`reference_files`, or `rois` in the script.
