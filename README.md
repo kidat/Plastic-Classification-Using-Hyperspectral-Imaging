@@ -5,11 +5,11 @@ using reference transmittance spectra measured in the Chemistry Lab.
 
 ## Method
 
-1. Apply white/dark reference correction.
-2. Estimate single-pass transmittance from the white-background measurement.
-3. Extract spectra from manually selected unknown-plastic ROIs.
-4. Compare normalized ROI spectra with known Chemistry Lab references.
-5. Create an optimized false-color SWIR image using bands with high ROI
+1.Spectral measurment of unkown plastic
+2. Apply white/dark reference correction.
+3. Estimate single-pass transmittance from the white-background measurement.
+5. Compare normalized spectra of unknown-plastic with known Chemistry Lab references.
+6. Create an optimized false-color SWIR image using bands with high visual
    separation.
 
 ## Results
@@ -22,7 +22,7 @@ using reference transmittance spectra measured in the Chemistry Lab.
 | Optimized SWIR visualization | Unknown-to-reference classification |
 |---|---|
 | ![Optimized SWIR image](Result/minimal_rgb_optimized.png) | ![Reference comparison](Result/minimal_roi_reference_comparison.png) |
-| False-color SWIR composite using bands selected for strong ROI variation. | Each unknown ROI compared with its closest known Chemistry Lab plastic reference. |
+| False-color SWIR composite using bands selected for strong variation. | Each unknown-plastic compared with its closest known Chemistry Lab plastic reference. |
 
 ## Run
 
@@ -42,7 +42,7 @@ The script writes result images to `Result/`.
 
 ## Data
 
-The dataset is not included. Use your own SWIR scan and known-plastic
+The dataset is not included because of its large file size. Put SWIR scan and known-plastic
 reference CSV files, and place them in this local structure:
 
 ```text
@@ -63,10 +63,6 @@ data/
     ├── PP(H)-transmittance.Sample.Raw.csv
     └── PS-transmittance.Sample.Raw.csv
 ```
-
-The script reads from `data/`, which is intentionally excluded from GitHub.
-After placing a compatible dataset there, run the script without changing
-your personal directory paths:
 
 ```bash
 python Plastic_classificationl.py
