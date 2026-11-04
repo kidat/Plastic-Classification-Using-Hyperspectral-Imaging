@@ -26,19 +26,9 @@ using reference transmittance spectra measured in the Chemistry Lab.
 
 ## Run
 
-Install the required packages:
-
-```bash
-pip install matplotlib numpy pandas spectral
-```
-
-Run:
-
 ```bash
 python Plastic_classificationl.py
 ```
-
-The script writes result images to `Result/`.
 
 ## Data
 
@@ -64,9 +54,3 @@ data/
     └── PS-transmittance.Sample.Raw.csv
 ```
 
-```bash
-python Plastic_classificationl.py
-```
-
-If your files use different names or ROI locations, update `scan_name`,
-`reference_files`, or `rois` in the script.
