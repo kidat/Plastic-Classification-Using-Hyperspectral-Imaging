@@ -21,7 +21,7 @@ using reference transmittance spectra measured in the Chemistry Lab.
 
 | Optimized SWIR visualization | Unknown-to-reference classification |
 |---|---|
-| ![Optimized SWIR image](Result/minimal_rgb_optimized.png) | ![Reference comparison](Result/minimal_roi_reference_comparison.png) |
+| <img src="Result/minimal_rgb_optimized.png" alt="Optimized SWIR image" width="450"> | ![Reference comparison](Result/minimal_roi_reference_comparison.png) |
 | False-color SWIR composite using bands selected for strong variation. | Each unknown-plastic compared with its closest known Chemistry Lab plastic reference. |
 
 ## Run
